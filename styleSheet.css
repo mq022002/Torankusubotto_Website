@@ -1,0 +1,420 @@
+@charset "UTF-8";
+* {
+    box-sizing: border-box;
+}
+/*=============== Body ===============*/
+body {
+    font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+    padding-top: 10px;
+    padding-right: 50px;
+    padding-left: 0px;
+    margin-left: 0px;
+    background-color: #333333;
+    margin-bottom: 0px;
+    margin-top: -10px;
+}
+
+/*=============== Navigation ===============*/
+.nav {
+    z-index: 9999;
+    list-style-type: none;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    background-color: #333333;
+    display: inline;
+    height: 56px;
+}
+.nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+a {
+    color: #fff;
+}
+
+.nav a.active {
+    background-color: #cc3333;
+    font-weight: bold;
+}
+.nav a:hover {
+    background-color: #ff6666;
+    font-weight: bold;
+}
+
+.nav .img img {
+    height: 24px;
+    position: relative;
+    top: 50%;
+}
+.nav a.activeimg {
+    background-color: #cc3333;
+    color: white;
+}
+.nav .activeimg img {
+    height: 24px;
+}
+
+.nav-right {
+    direction: ltr;
+    float: right;
+}
+
+/*=============== Content Elements ===============*/
+.main {
+    margin-top: 24px;
+    width: 100%;
+    border-right: thin solid #cc3333;
+    background-color: #999999;
+    display: table;
+}
+.img-intro{
+		display: flex;
+		justify-content: center;
+	}
+
+/*
+.intro{
+	background-color: #333333;
+	padding: 1px 30px 0px;
+	margin-top: -10px;
+}
+*/
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    vertical-align: middle;
+}
+
+.card {
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.card input[type="text"] {
+    float: right;
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+}
+
+.scrollbox{
+	-ms-overflow-style: none;
+    background-color: #eee;
+    border: thin solid #cc3333;
+    overflow: auto;
+	height: 150px;
+    border-radius: 10px;
+	padding: 20px;
+}
+
+code {
+    background-color: #dddddd;
+    padding: 0 10px;
+}
+
+/*=============== Table ===============*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr:nth-of-type(odd) {
+    background: #eee;
+}
+th {
+    background: #333;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+td,
+th {
+    padding: 6px;
+    border: 1px solid #ccc;
+}
+
+/*=============== Footer ===============*/
+.footer {
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+    border-bottom-right-radius: 30px;
+    border-top: thin solid #000000;
+    border-right: thin solid #cc3333;
+    border-bottom: medium solid #cc3333;
+    background-color: #666666;
+}
+
+.footercolumn {
+    flex: 1;
+}
+
+.footer img {
+    display: inline-block;
+    float: none;
+    height: 40px;
+    position: relative;
+    transform: translateY(+50%);
+}
+
+/*=============== Sticky Social Bar ===============*/
+.icon-bar {
+    position: fixed;
+    top: 7%;
+    right: 0%;
+    background-color: #000;
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 20.5px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+.linkedin {
+    background: #cc3333;
+    color: white;
+}
+
+.github {
+    background: #cc3333;
+    color: white;
+}
+
+/*=============== Slideshow ===============*/
+.mySlides {
+    display: none;
+}
+
+.slideshow-container {
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 20px 0px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 20px 20px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 900px) {
+	.img-intro{
+		display: flex;
+		justify-content: center;
+	}
+    .main {
+        margin-top: 0px;
+    }
+    /*=============== Navigation ===============*/
+    .nav {
+        position: sticky;
+        height: 14px;
+    }
+    .nav a {
+        float: none;
+        width: 100%;
+        font-size: 14px;
+    }
+    .nav .img img {
+        height: 14px;
+    }
+    .nav .activeimg img {
+        height: 14px;
+    }
+
+    .nav-right {
+        float: none;
+    }
+
+    /*=============== Content Elements ===============*/
+    .row {
+        display: block;
+    }
+
+    .column {
+        flex: 1;
+        float: none;
+    }
+
+    iframe {
+        padding: 20px 0px;
+    }
+    /*=============== Sticky Social Bar ===============*/
+    .icon-bar {
+        top: 0%;
+    }
+
+	/*=============== Bot Commands Table ===============*/
+    .table-botcommands table,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    .table-botcommands  thead tr {
+        display: none;
+    }
+	
+	.table-botcommands  th{
+		display: none;
+	}
+
+    .table-botcommands  tr {
+        border: 1px solid #000000;
+    }
+
+    .table-botcommands  td {
+        border: none;
+        border-bottom: 1px solid #000;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .table-botcommands  td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 0%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    .table-botcommands  td:nth-of-type(1):before {
+        content: "Command: ";
+    }
+    .table-botcommands  td:nth-of-type(2):before {
+		content: "Description: ";
+    }
+	
+    /*=============== Donate Table ===============*/
+    .table-donate table,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    .table-donate thead tr {
+        display: none;
+    }
+	
+	.table-donate th{
+		display: none;
+	}
+
+    .table-donate tr {
+        border: 1px solid #000000;
+    }
+
+    .table-donate td {
+        border: none;
+        border-bottom: 1px solid #000;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .table-donate td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 0%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    .table-donate td:nth-of-type(1):before {
+        content: "Tier: ";
+    }
+    .table-donate td:nth-of-type(2):before {
+		content: "Perks: ";
+    }
+}
