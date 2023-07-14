@@ -1,7 +1,9 @@
 @charset "UTF-8";
+
 * {
     box-sizing: border-box;
 }
+
 /*=============== Body ===============*/
 body {
     font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
@@ -25,6 +27,7 @@ body {
     display: inline;
     height: 56px;
 }
+
 .nav a {
     float: left;
     display: block;
@@ -43,6 +46,7 @@ a {
     background-color: #cc3333;
     font-weight: bold;
 }
+
 .nav a:hover {
     background-color: #ff6666;
     font-weight: bold;
@@ -53,10 +57,12 @@ a {
     position: relative;
     top: 50%;
 }
+
 .nav a.activeimg {
     background-color: #cc3333;
     color: white;
 }
+
 .nav .activeimg img {
     height: 24px;
 }
@@ -74,10 +80,11 @@ a {
     background-color: #999999;
     display: table;
 }
-.img-intro{
-		display: flex;
-		justify-content: center;
-	}
+
+.img-intro {
+    display: flex;
+    justify-content: center;
+}
 
 /*
 .intro{
@@ -109,14 +116,14 @@ a {
     font-size: 17px;
 }
 
-.scrollbox{
-	-ms-overflow-style: none;
+.scrollbox {
+    -ms-overflow-style: none;
     background-color: #eee;
     border: thin solid #cc3333;
     overflow: auto;
-	height: 150px;
+    height: 150px;
     border-radius: 10px;
-	padding: 20px;
+    padding: 20px;
 }
 
 code {
@@ -133,12 +140,14 @@ table {
 tr:nth-of-type(odd) {
     background: #eee;
 }
+
 th {
     background: #333;
     color: white;
     font-weight: bold;
     text-align: center;
 }
+
 td,
 th {
     padding: 6px;
@@ -280,32 +289,38 @@ th {
     from {
         opacity: 0.4;
     }
+
     to {
         opacity: 1;
     }
 }
 
 @media screen and (max-width: 900px) {
-	.img-intro{
-		display: flex;
-		justify-content: center;
-	}
+    .img-intro {
+        display: flex;
+        justify-content: center;
+    }
+
     .main {
         margin-top: 0px;
     }
+
     /*=============== Navigation ===============*/
     .nav {
         position: sticky;
         height: 14px;
     }
+
     .nav a {
         float: none;
         width: 100%;
         font-size: 14px;
     }
+
     .nav .img img {
         height: 14px;
     }
+
     .nav .activeimg img {
         height: 14px;
     }
@@ -327,12 +342,13 @@ th {
     iframe {
         padding: 20px 0px;
     }
+
     /*=============== Sticky Social Bar ===============*/
     .icon-bar {
         top: 0%;
     }
 
-	/*=============== Bot Commands Table ===============*/
+    /*=============== Bot Commands Table ===============*/
     .table-botcommands table,
     th,
     td,
@@ -340,26 +356,26 @@ th {
         display: block;
     }
 
-    .table-botcommands  thead tr {
+    .table-botcommands thead tr {
         display: none;
     }
-	
-	.table-botcommands  th{
-		display: none;
-	}
 
-    .table-botcommands  tr {
+    .table-botcommands th {
+        display: none;
+    }
+
+    .table-botcommands tr {
         border: 1px solid #000000;
     }
 
-    .table-botcommands  td {
+    .table-botcommands td {
         border: none;
         border-bottom: 1px solid #000;
         position: relative;
         padding-left: 50%;
     }
 
-    .table-botcommands  td:before {
+    .table-botcommands td:before {
         position: absolute;
         top: 6px;
         left: 6px;
@@ -368,13 +384,14 @@ th {
         white-space: nowrap;
     }
 
-    .table-botcommands  td:nth-of-type(1):before {
+    .table-botcommands td:nth-of-type(1):before {
         content: "Command: ";
     }
-    .table-botcommands  td:nth-of-type(2):before {
-		content: "Description: ";
+
+    .table-botcommands td:nth-of-type(2):before {
+        content: "Description: ";
     }
-	
+
     /*=============== Donate Table ===============*/
     .table-donate table,
     th,
@@ -386,10 +403,10 @@ th {
     .table-donate thead tr {
         display: none;
     }
-	
-	.table-donate th{
-		display: none;
-	}
+
+    .table-donate th {
+        display: none;
+    }
 
     .table-donate tr {
         border: 1px solid #000000;
@@ -414,7 +431,8 @@ th {
     .table-donate td:nth-of-type(1):before {
         content: "Tier: ";
     }
+
     .table-donate td:nth-of-type(2):before {
-		content: "Perks: ";
+        content: "Perks: ";
     }
 }
