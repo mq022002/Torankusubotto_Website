@@ -86,14 +86,6 @@ a {
     justify-content: center;
 }
 
-/*
-.intro{
-	background-color: #333333;
-	padding: 1px 30px 0px;
-	margin-top: -10px;
-}
-*/
-
 .row {
     display: flex;
 }
@@ -295,7 +287,9 @@ th {
     }
 }
 
-@media screen and (max-width: 900px) {
+
+/*=============== For Certain Display Widths ===============*/
+@media screen and (max-width: 1170px) {
     .img-intro {
         display: flex;
         justify-content: center;
@@ -353,7 +347,7 @@ th {
     th,
     td,
     tr {
-        display: block;
+        table-layout: fixed;
     }
 
     .table-botcommands thead tr {
@@ -370,7 +364,7 @@ th {
 
     .table-botcommands td {
         border: none;
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid #000000;
         position: relative;
         padding-left: 50%;
     }
@@ -414,7 +408,7 @@ th {
 
     .table-donate td {
         border: none;
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid #000000;
         position: relative;
         padding-left: 50%;
     }
@@ -434,5 +428,9 @@ th {
 
     .table-donate td:nth-of-type(2):before {
         content: "Perks: ";
+    }
+
+    iframe {
+        height: 625px;
     }
 }
