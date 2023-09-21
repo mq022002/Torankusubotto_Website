@@ -118,6 +118,10 @@ a {
     padding: 20px;
 }
 
+.scrollbox ul {
+    margin: 0;
+}
+
 code {
     background-color: #dddddd;
     padding: 0 10px;
@@ -326,6 +330,10 @@ th {
     /*=============== Content Elements ===============*/
     .row {
         display: block;
+    }
+
+    .column img {
+        padding-bottom: 10px;
     }
 
     .column {
